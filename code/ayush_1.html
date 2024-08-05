@@ -1,0 +1,260 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Catalog</title>
+    <link rel="stylesheet" href="ayush_1.css">
+    <link rel="stylesheet" href="additional-styles.css"> <!-- Add additional styles here -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</head>
+<body>
+    <!-- For BMW -->
+    <section>
+        <section class="grid-container">
+            <div class="car">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.v6pVLArW0uKihzOarGxllgHaE7&pid=Api&P=0&h=180" alt="BMW 5 Series">
+                <h4>BMW 5 Series</h4>
+                <p>Luxury Sedan</p>
+                <p>Starting from $54,200 (around $60,000 CAD)</p>
+                <div id="button">
+                    <a href="#" class="learn-more">Read More</a>
+                    <a href="sameera_5.html" class="btn">Buy now</a>
+                </div>
+                <div class="additional-info" style="display:none;">
+                    <p>Additional information about the BMW 5 Series...</p>
+                </div>
+            </div>
+            <div class="car">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.XQkOPJb-AmTYRaHL78lHLgHaFj&pid=Api&P=0&h=180" alt="BMW X5">
+                <h4>BMW X5</h4>
+                <p>Luxury SUV</p>
+                <p>Starting from $60,700 (around $67,000 CAD)</p>
+                <a href="#" class="learn-more">Learn More</a>
+                <div class="additional-info" style="display:none;">
+                    <p>Additional information about the BMW X5...</p>
+                </div>
+            </div>
+            <div class="car">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.JE5lm8jPVZNlcpjT154qqwHaEK&pid=Api&P=0&h=180" alt="BMW 7 Series">
+                <h4>BMW 7 Series</h4>
+                <p>Luxury Sedan</p>
+                <p>Starting from $86,800 (around $96,000 CAD)</p>
+                <a href="#" class="learn-more">Learn More</a>
+                <div class="additional-info" style="display:none;">
+                    <p>Additional information about the BMW 7 Series...</p>
+                </div>
+            </div>
+            <div class="car">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.THySQ-QQ7pgzJaQGabxkTgHaFj&pid=Api&P=0&h=180" alt="BMW i8">
+                <h4>BMW i8</h4>
+                <p>Plug-in Hybrid Sports Car</p>
+                <p>Starting from $147,500 (around $164,000 CAD)</p>
+                <a href="#" class="learn-more">Learn More</a>
+                <div class="additional-info" style="display:none;">
+                    <p>Additional information about the BMW i8...</p>
+                </div>
+            </div>
+            <!-- Repeat for other cars as necessary -->
+            <div class="car">
+              <img src="https://tse3.mm.bing.net/th?id=OIP.v6pVLArW0uKihzOarGxllgHaE7&pid=Api&P=0&h=180" alt="BMW 5 Series">
+              <h4>BMW 5 Series</h4>
+              <p>Luxury Sedan</p>
+              <p>Starting from $54,200 (around $60,000 CAD)</p>
+              <div id="button">
+                  <a href="#" class="learn-more">Read More</a>
+                  <a href="sameera_5.html" class="btn">Buy now</a>
+              </div>
+              <div class="additional-info" style="display:none;">
+                  <p>Additional information about the BMW 5 Series...</p>
+              </div>
+          </div>
+          <div class="car">
+              <img src="https://tse4.mm.bing.net/th?id=OIP.XQkOPJb-AmTYRaHL78lHLgHaFj&pid=Api&P=0&h=180" alt="BMW X5">
+              <h4>BMW X5</h4>
+              <p>Luxury SUV</p>
+              <p>Starting from $60,700 (around $67,000 CAD)</p>
+              <a href="#" class="learn-more">Learn More</a>
+              <div class="additional-info" style="display:none;">
+                  <p>Additional information about the BMW X5...</p>
+              </div>
+          </div>
+          <div class="car">
+              <img src="https://tse3.mm.bing.net/th?id=OIP.JE5lm8jPVZNlcpjT154qqwHaEK&pid=Api&P=0&h=180" alt="BMW 7 Series">
+              <h4>BMW 7 Series</h4>
+              <p>Luxury Sedan</p>
+              <p>Starting from $86,800 (around $96,000 CAD)</p>
+              <a href="#" class="learn-more">Learn More</a>
+              <div class="additional-info" style="display:none;">
+                  <p>Additional information about the BMW 7 Series...</p>
+              </div>
+          </div>
+          <div class="car">
+              <img src="https://tse2.mm.bing.net/th?id=OIP.THySQ-QQ7pgzJaQGabxkTgHaFj&pid=Api&P=0&h=180" alt="BMW i8">
+              <h4>BMW i8</h4>
+              <p>Plug-in Hybrid Sports Car</p>
+              <p>Starting from $147,500 (around $164,000 CAD)</p>
+              <a href="#" class="learn-more">Learn More</a>
+              <div class="additional-info" style="display:none;">
+                  <p>Additional information about the BMW i8...</p>
+              </div>
+          </div>
+          <div class="car">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.v6pVLArW0uKihzOarGxllgHaE7&pid=Api&P=0&h=180" alt="BMW 5 Series">
+            <h4>BMW 5 Series</h4>
+            <p>Luxury Sedan</p>
+            <p>Starting from $54,200 (around $60,000 CAD)</p>
+            <div id="button">
+                <a href="#" class="learn-more">Read More</a>
+                <a href="sameera_5.html" class="btn">Buy now</a>
+            </div>
+            <div class="additional-info" style="display:none;">
+                <p>Additional information about the BMW 5 Series...</p>
+            </div>
+        </div>
+        <div class="car">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.XQkOPJb-AmTYRaHL78lHLgHaFj&pid=Api&P=0&h=180" alt="BMW X5">
+            <h4>BMW X5</h4>
+            <p>Luxury SUV</p>
+            <p>Starting from $60,700 (around $67,000 CAD)</p>
+            <a href="#" class="learn-more">Learn More</a>
+            <div class="additional-info" style="display:none;">
+                <p>Additional information about the BMW X5...</p>
+            </div>
+        </div>
+        <div class="car">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.JE5lm8jPVZNlcpjT154qqwHaEK&pid=Api&P=0&h=180" alt="BMW 7 Series">
+            <h4>BMW 7 Series</h4>
+            <p>Luxury Sedan</p>
+            <p>Starting from $86,800 (around $96,000 CAD)</p>
+            <a href="#" class="learn-more">Learn More</a>
+            <div class="additional-info" style="display:none;">
+                <p>Additional information about the BMW 7 Series...</p>
+            </div>
+        </div>
+        <div class="car">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.THySQ-QQ7pgzJaQGabxkTgHaFj&pid=Api&P=0&h=180" alt="BMW i8">
+            <h4>BMW i8</h4>
+            <p>Plug-in Hybrid Sports Car</p>
+            <p>Starting from $147,500 (around $164,000 CAD)</p>
+            <a href="#" class="learn-more">Learn More</a>
+            <div class="additional-info" style="display:none;">
+                <p>Additional information about the BMW i8...</p>
+            </div>
+        </div>
+        <!-- Repeat for other cars as necessary -->
+        <div class="car">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.v6pVLArW0uKihzOarGxllgHaE7&pid=Api&P=0&h=180" alt="BMW 5 Series">
+          <h4>BMW 5 Series</h4>
+          <p>Luxury Sedan</p>
+          <p>Starting from $54,200 (around $60,000 CAD)</p>
+          <div id="button">
+              <a href="#" class="learn-more">Read More</a>
+              <a href="sameera_5.html" class="btn">Buy now</a>
+          </div>
+          <div class="additional-info" style="display:none;">
+              <p>Additional information about the BMW 5 Series...</p>
+          </div>
+      </div>
+      <div class="car">
+          <img src="https://tse4.mm.bing.net/th?id=OIP.XQkOPJb-AmTYRaHL78lHLgHaFj&pid=Api&P=0&h=180" alt="BMW X5">
+          <h4>BMW X5</h4>
+          <p>Luxury SUV</p>
+          <p>Starting from $60,700 (around $67,000 CAD)</p>
+          <a href="#" class="learn-more">Learn More</a>
+          <div class="additional-info" style="display:none;">
+              <p>Additional information about the BMW X5...</p>
+          </div>
+      </div>
+      <div class="car">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.JE5lm8jPVZNlcpjT154qqwHaEK&pid=Api&P=0&h=180" alt="BMW 7 Series">
+          <h4>BMW 7 Series</h4>
+          <p>Luxury Sedan</p>
+          <p>Starting from $86,800 (around $96,000 CAD)</p>
+          <a href="#" class="learn-more">Learn More</a>
+          <div class="additional-info" style="display:none;">
+              <p>Additional information about the BMW 7 Series...</p>
+          </div>
+      </div>
+      <div class="car">
+          <img src="https://tse2.mm.bing.net/th?id=OIP.THySQ-QQ7pgzJaQGabxkTgHaFj&pid=Api&P=0&h=180" alt="BMW i8">
+          <h4>BMW i8</h4>
+          <p>Plug-in Hybrid Sports Car</p>
+          <p>Starting from $147,500 (around $164,000 CAD)</p>
+          <a href="#" class="learn-more">Learn More</a>
+          <div class="additional-info" style="display:none;">
+              <p>Additional information about the BMW i8...</p>
+          </div>
+      </div>
+        </section>
+    </section>
+    
+    <script>
+        $(document).ready(function(){
+            // Add click event handler to "Learn More" links
+            $('.learn-more').click(function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                var $car = $(this).closest('.car');
+                var $description = $car.find('.additional-info');
+                $description.slideToggle();
+            });
+
+            // Add hover effect to car images
+            $('.car img').hover(function() {
+                $(this).css('opacity', '0.7');
+            }, function() {
+                $(this).css('opacity', '1');
+            });
+        });
+    </script>
+</body>
+</html>

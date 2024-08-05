@@ -1,0 +1,155 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 10px;
+  padding: 20px;
+  background-color: #f3f4f6;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+}
+
+/* Company Section */
+.company {
+  background-color: #f7f6ed;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #ccc;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.company h3 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.company section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Car Card */
+.car {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+
+.car:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.car img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.car h4 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #2c3e50; /* Dark Blue */
+}
+
+.car p {
+  color: #7f8c8d; /* Grey */
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.learn-more, .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db; /* Blue */
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more:hover, .btn:hover {
+  background-color: #2980b9; /* Darker Blue */
+}
+
+.additional-info {
+  display: none;
+  margin-top: 10px;
+  color: #666;
+}
+
+.zoom-in {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  .car {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .car {
+    width: 100%;
+  }
+}
+
+/* Additional Color Styles */
+.car:nth-child(odd) {
+  background-color: #ecf0f1; /* Light Grey */
+}
+
+.car:nth-child(even) {
+  background-color: #f9f9f9; /* Very Light Grey */
+}
+
+.car:nth-child(odd) h4 {
+  color: #e74c3c; /* Red */
+}
+
+.car:nth-child(even) h4 {
+  color: #8e44ad; /* Purple */
+}
+
+.car:nth-child(odd) .learn-more, .car:nth-child(odd) .btn {
+  background-color: #e67e22; /* Orange */
+}
+
+.car:nth-child(even) .learn-more, .car:nth-child(even) .btn {
+  background-color: #27ae60; /* Green */
+}
+
+.car:nth-child(odd) .learn-more:hover, .car:nth-child(odd) .btn:hover {
+  background-color: #d35400; /* Darker Orange */
+}
+
+.car:nth-child(even) .learn-more:hover, .car:nth-child(even) .btn:hover {
+  background-color: #1e8449; /* Darker Green */
+}

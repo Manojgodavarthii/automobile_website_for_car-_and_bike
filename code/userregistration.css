@@ -1,0 +1,145 @@
+
+body {
+    font-family: Arial, sans-serif;
+    /*background-color: #c2fc04;*/
+    background-color: #ffffff;
+
+}
+#registrationheading{
+    text-align: center;
+    padding-bottom:  25px;
+    padding-top: 20px;
+    background-image: linear-gradient(#e14a0e,#e0f810) ;
+    margin: 0 auto;
+    max-width: 400px;
+
+
+}
+#fline {
+    width: 50%;
+}
+form {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 30px;
+    background-color: #08f8f8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#username {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 3px solid #ea0707;
+    border-radius: 5px;
+    background-color: #e5ef5a;
+    box-sizing: border-box;
+
+}
+
+
+#usermailid{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 3px solid #ea0707;
+    border-radius: 5px;
+    background-color: #e5ef5a;
+    box-sizing: border-box;
+
+}
+
+#dob {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 3px solid #ea0707;
+    border-radius: 5px;
+    background-color: #e5ef5a;
+    box-sizing: border-box;
+
+}
+
+
+
+#userphone {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 3px solid #ea0707;
+    border-radius: 5px;
+    background-color: #e5ef5a;
+    box-sizing: border-box;
+}
+
+#region {
+    width: 100%;
+    padding: 10px;
+    background-color: #e5ef5a;
+    margin-bottom: 15px;
+    border: 3px solid #ea0707;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#toggle1 {
+    margin-right: 5px;
+  
+}
+
+#toggle1 {
+    margin-right: 5px;
+
+}
+
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+#userpassword ,#userconformpassword{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 3px solid #ea0707;
+    border-radius: 5px;
+    background-color: #e5ef5a;
+    box-sizing: border-box;
+
+}
+
+#submitbutton {
+    font-size : 20px;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    color: #fb04c5;
+    text-align: center;
+    margin-bottom: 15px;
+    border: 3px solid #3a04fb;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #04fb3a;
+    cursor: pointer;
+}
+
+#resetbutton {
+    font-size: 20px;
+    font-weight:bold;
+    color: #f501f5;
+    background-color: #fa4d4d;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 3px solid #0152f5;
+    border-radius: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+

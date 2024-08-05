@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login and Registration Form</title>
+<style>
+    #userLoginForm, #customerLoginForm, #thirdLoginForm, #registrationForm {
+        display: none;
+    }
+
+    /* Apply display: none to all input fields within login forms */
+    #userLoginForm input, #customerLoginForm input, #thirdLoginForm input {
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<button id="userLoginBtn">User Login</button>
+<button id="customerLoginBtn">Customer Login</button>
+</button>
+
+<form id="userLoginForm">
+    User Name: <input type="text"><br>
+    Password: <input type="password"><br>
+    <button type="submit">Login</button>
+</form>
+
+<form id="customerLoginForm">
+    Customer ID: <input type="text"><br>
+    PIN: <input type="password"><br>
+    Additional Option: <input type="text"><br> <!-- Additional input field -->
+    <button type="submit">Login</button>
+</form>
+
+<form id="thirdLoginForm">
+    Third Option Field: <input type="text"><br>
+    <!-- Add other fields as needed -->
+    <button type="submit">Login</button>
+</form>
+
+<form id="registrationForm">
+    <h2>User Registration</h2>
+    <!-- Your registration form content here -->
+</form>
+
+<script>
+    const userLoginBtn = document.getElementById("userLoginBtn");
+    const customerLoginBtn = document.getElementById("customerLoginBtn");
+    const thirdLoginBtn = document.getElementById("thirdLoginBtn");
+    const registerBtn = document.getElementById("registerBtn");
+    const userLoginForm = document.getElementById("userLoginForm");
+    const customerLoginForm = document.getElementById("customerLoginForm");
+    const thirdLoginForm = document.getElementById("thirdLoginForm");
+    const registrationForm = document.getElementById("registrationForm");
+
+    userLoginBtn.addEventListener("click", function() {
+        userLoginForm.style.display = "block";
+        customerLoginForm.style.display = "none";
+        thirdLoginForm.style.display = "none";
+        registrationForm.style.display = "none"; // Hide registration form
+    });
+
+    customerLoginBtn.addEventListener("click", function() {
+        userLoginForm.style.display = "none";
+        customerLoginForm.style.display = "block";
+        thirdLoginForm.style.display = "none";
+        registrationForm.style.display = "none"; // Hide registration form
+    });
+
+    thirdLoginBtn.addEventListener("click", function() {
+        userLoginForm.style.display = "none";
+        customerLoginForm.style.display = "none";
+        thirdLoginForm.style.display = "block";
+        registrationForm.style.display = "none"; // Hide registration form
+    });
+
+    registerBtn.addEventListener("click", function() {
+        userLoginForm.style.display = "none";
+        customerLoginForm.style.display = "none";
+        thirdLoginForm.style.display = "none";
+        registrationForm.style.display = "block"; // Show registration form
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="user_login.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const userLoginBtn = document.getElementById("userLoginBtn");
+            const customerLoginBtn = document.getElementById("customerLoginBtn");
+            const userLoginForm = document.getElementById("userLoginForm");
+            const customerLoginForm = document.getElementById("customerLoginForm");
+
+            userLoginForm.style.display = "none";
+            customerLoginForm.style.display = "none";
+
+            userLoginBtn.addEventListener("click", function() {
+                userLoginForm.style.display = "block";
+                customerLoginForm.style.display = "none";
+            });
+
+            customerLoginBtn.addEventListener("click", function() {
+                userLoginForm.style.display = "none";
+                customerLoginForm.style.display = "block";
+            });
+
+            document.getElementById("togglePassword").addEventListener("change", function() {
+                togglePasswordVisibility("userPassword");
+            });
+
+            document.getElementById("toggleCustomerPassword").addEventListener("change", function() {
+                togglePasswordVisibility("customerPassword");
+            });
+
+            document.getElementById("userResetBtn").addEventListener("click", function() {
+                clearPassword("userPassword");
+            });
+
+            document.getElementById("customerResetBtn").addEventListener("click", function() {
+                clearPassword("customerPassword");
+            });
+
+            document.getElementById("userSubmitBtn").addEventListener("click", function() {
+                submitForm("userMail", "userPassword");
+            });
+
+            document.getElementById("customerSubmitBtn").addEventListener("click", function() {
+                submitForm("customerMail", "customerPassword", "pin");
+            });
+        });
+
+        function togglePasswordVisibility(passwordId) {
+            const passwordInput = document.getElementById(passwordId);
+            passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+        }
+
+        function clearPassword(passwordId) {
+            document.getElementById(passwordId).value = "";
+        }
+
+        function isEmpty(elem, errMsg) {
+            if (elem.value.trim() === "") {
+                alert(errMsg);
+                elem.focus();
+                return true;
+            }
+            return false;
+        }
+
+        function emailValidation(elem, errMsg) {
+            const email = elem.value.trim();
+            const emailExp = /^[^\s@]+@gmail\.com$/i;
+            if (!email.match(emailExp)) {
+                alert(errMsg);
+                elem.focus();
+                return false;
+            }
+            return true;
+        }
+
+        function passwordValidation(elem, errMsg) {
+            const password = elem.value;
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                elem.focus();
+                return false;
+            }
+            const hasNumber = /\d/.test(password);
+            const hasUpperCase = /[A-Z]/.test(password);
+            const hasLowerCase = /[a-z]/.test(password);
+            const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+            if (!(hasNumber && hasUpperCase && hasLowerCase && hasSpecialChar)) {
+                alert(errMsg);
+                elem.focus();
+                return false;
+            }
+            return true;
+        }
+
+        function submitForm(emailId, passwordId, pinId) {
+            const email = document.getElementById(emailId);
+            const password = document.getElementById(passwordId);
+            const pin = pinId ? document.getElementById(pinId) : null;
+
+            if (isEmpty(email, "Mail cannot be empty") || !emailValidation(email, "Please enter a valid Gmail address")) {
+                return;
+            }
+
+            if (isEmpty(password, "Password cannot be empty") || !passwordValidation(password, "Password must contain at least one uppercase letter, one lowercase letter, one number, one special character, and must be at least 6 characters long.")) {
+                return;
+            }
+
+            if (pin && (isEmpty(pin, "Pin cannot be empty") || isNaN(pin.value))) {
+                alert("Please enter a valid pin.");
+                pin.focus();
+                return;
+            }
+
+            alert("Your login is successful");
+
+            email.value = "";
+            password.value = "";
+            if (pin) {
+                pin.value = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <img id="backgroundimg" src="userbackgroundimage.jpg" alt="Background Image">
+    <table border="2" id="table1">
+        <td>
+            <section id="buttonSection">
+                <button id="userLoginBtn">User Login</button>
+                <button id="customerLoginBtn">Customer Login</button>
+            </section>
+            <form id="userLoginForm">
+                <label for="userMail">User Mail Id:</label><br>
+                <input type="email" id="userMail" name="userMail" placeholder="Enter your mail id"><br><br>
+                <label for="userPassword">User Password:</label><br>
+                <input type="password" id="userPassword" name="userPassword" placeholder="Enter your password">
+                <input type="checkbox" id="togglePassword">
+                <label for="togglePassword">Show Password</label><br><br>
+                <input type="button" id="userSubmitBtn" value="Submit">
+                <input type="reset" id="userResetBtn" value="Reset">
+            </form>
+            <form id="customerLoginForm">
+                <label for="customerMail">User Mail Id:</label><br>
+                <input type="email" id="customerMail" name="customerMail" placeholder="Enter your mail id"><br><br>
+                <label for="customerPassword">User Password:</label><br>
+                <input type="password" id="customerPassword" name="customerPassword" placeholder="Enter your password">
+                <input type="checkbox" id="toggleCustomerPassword">
+                <label for="toggleCustomerPassword">Show Password</label><br><br>
+                <label for="pin">Enter customer pin:</label><br>
+                <input type="text" id="pin" name="pin" placeholder="Enter pin"><br><br>
+                <input type="button" id="customerSubmitBtn" value="Submit">
+                <input type="reset" id="customerResetBtn" value="Reset">
+            </form>
+        </td>
+    </table>
+
+    
+</body>
+</html>

@@ -1,0 +1,198 @@
+/*____________________general____________________*/
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-image: url("userbackgroundimage.jpg"); /* Specify the path to your image */
+
+}
+
+#table1 
+{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute; /* Make the table absolute for positioning within the container */
+    top: 50%; 
+    right: 50%;/* Position halfway from the top */
+    width: 100%; /* Optional: Set table width to fill container */
+    align-self: center;
+    border-color: #eb1a0b;
+    border-radius: 10px;
+    border-width: 10px;
+    align-items: center;
+    /* margin-left: 40%;
+    margin-top: 15%;
+    text-shadow: #e70505;*/
+    color: #0a4fe5;
+    position: center;
+    align-tracks: center;
+    width: 400px;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+}
+/* ________________________user login_______________*/
+#userLoginBtn{
+    
+    padding: 5px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style:solid;
+    color: #0b52eb;
+    
+}
+#customerLoginBtn{
+    padding: 5px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style:solid;
+    color: #0b52eb;
+
+
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    background-color: #5de712;
+    position: relative;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+label {
+    font-weight: bold;
+}
+
+#userMail{
+    width: calc(40% ); /* Adjust according to padding and border */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid #fc1206;
+    border-radius: 5px;
+}
+#userPassword {
+    width: calc(45% ); /* Adjust according to padding and border */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid #fc1206;
+    border-radius: 5px;
+}
+#toggle {
+    margin-left: 5px;
+}
+
+#userResetBtn,#userSubmitBtn {
+    padding: 10px 20px;
+    background-color: #0a74e5;
+    border: solid;
+    color: #eba40b;
+    cursor:pointer;
+    border-radius: 3px;
+}
+#userResetBtn:visited {
+    background-color: #71b300;
+}
+#userSubmitBtn:visited {
+    background-color: #71b300;
+}
+
+#userResetBtn,#userSubmitBtn:active {
+    background-color: #0a74e5;
+}
+#userResetBtn,#userSubmitBtn.onclick {
+    background-color: #0a74e5;
+}
+
+
+
+
+/*________________customer login____________*/
+#userLoginBtn1{
+    
+    padding: 5px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style:solid;
+    color: #0b52eb;
+    
+}
+#customerLoginBtn1{
+    padding: 5px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style:solid;
+    color: #0b52eb;
+
+
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    background-color: #5de712;
+    position: relative;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+label {
+    font-weight: bold;
+}
+
+#customerMail{
+    width: calc(40% ); /* Adjust according to padding and border */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid #fc1206;
+    border-radius: 5px;
+}
+
+#customerPassword {
+    width: calc(45% ); /* Adjust according to padding and border */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid #fc1206;
+    border-radius: 5px;
+
+}
+
+
+#pin {
+    width: calc(45% ); /* Adjust according to padding and border */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid #fc1206;
+    border-radius: 5px;
+}
+#toggle {
+    margin-left: 5px;
+}
+
+#customerResetBtn,#customerSubmitBtn {
+    padding: 10px 20px;
+    background-color: #0a74e5;
+    border: solid;
+    color: #eba40b;
+    cursor:pointer;
+    border-radius: 3px;
+}
+#customerResetBtn:visited {
+    background-color: #71b300;
+}
+#customerSubmitBtn:visited {
+    background-color: #71b300;
+}
+
+#customerResetBtn,#customerSubmitBtn:active {
+    background-color: #0a74e5;
+}
+#customerResetBtn,#customerSubmitBtn.onclick {
+    background-color: #0a74e5;
+}
+
+
+
+/*__________________________customer login___________________*/

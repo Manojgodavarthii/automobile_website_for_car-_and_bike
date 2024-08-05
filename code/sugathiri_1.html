@@ -1,0 +1,130 @@
+<html>
+<header>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Data on Button Click</title>
+<link rel="stylesheet" href="sugathiri_1.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $(".status-item").click(function(){
+            var status = $(this).data('status');
+            showDetails(status);
+        });
+        
+        function showDetails(status) {
+            $("#details-container").show();
+           
+        }
+    });
+    </script>
+</head>
+<body>
+    <h2 id="heading_1">Repair status</h2>
+
+    <div id="details-container_1">
+        <!-- Customer details will be displayed here -->
+        <table border="1">
+            <tr>
+                <th>Customer Name</th>
+                <td>xxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <th>Customer Mobile number</th>
+                <td>xxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <th>Customer Address</th>
+                <td>xxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <th>Customer Email Id</th>
+                <td>xxxxxxxxxxxxxxxxxx@gmail.com</td>
+            </tr>
+            <tr>
+                <th>Customer's Bike Model</th>
+                <td>xxxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <th>Customer's Bike Number</th>
+                <td>xxxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <th>Date of Repair</th>
+                <td>xx/xx/xxxx</td>
+            </tr>
+            <tr>
+                <th>Repair Status</th>
+                <td>xx%</td>
+            </tr>
+            <tr>
+                <th>Date of Delivery</th>
+                <td>xx/xx/xxxx</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+<div class="container">
+    
+    <div class="status">
+        <div class="status-item pending" data-status="pending">
+            <h2>Pending</h2>
+            <p>3 vehicles</p>
+        </div>
+        <div class="status-item in-progress" data-status="in-progress">
+            <h2>In Progress</h2>
+            <p>2 vehicles</p>
+        </div>
+        <div class="status-item completed" data-status="completed">
+            <h2>Completed</h2>
+            <p>5 vehicles</p>
+        </div>
+    </div>
+    <div id="details-container">
+        <!-- Customer details will be displayed here -->
+        <table border="1">
+            <tr>
+                <th>Customer Name</th>
+                <td>xxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <th>Customer Mobile number</th>
+                <td>xxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <th>Customer Address</th>
+                <td>xxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <th>Customer Email Id</th>
+                <td>xxxxxxxxxxxxxxxxxx@gmail.com</td>
+            </tr>
+            <tr>
+                <th>Customer's Bike Model</th>
+                <td>xxxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <th>Customer's Bike Number</th>
+                <td>xxxxxxxxxxx</td>
+            </tr>
+            <tr>
+                <th>Date of Repair</th>
+                <td>xx/xx/xxxx</td>
+            </tr>
+            <tr>
+                <th>Repair Status</th>
+                <td>xx%</td>
+            </tr>
+            <tr>
+                <th>Date of Delivery</th>
+                <td>xx/xx/xxxx</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app="registrationApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  
+    <script>
+      function togglePasswordVisibility(inputId) {
+          var passwordInput = document.getElementById(inputId);
+          passwordInput.type = (passwordInput.type === "password") ? "text" : "password";
+      }
+
+      function clearPasswords() {
+          document.getElementById("userpassword").value = "";
+          document.getElementById("userconformpassword").value = "";
+          document.getElementById("toggle1").checked = false;
+          document.getElementById("toggle2").checked = false;
+      }
+
+      function validateForm() {
+          var username = document.getElementById("username").value.trim();
+          var email = document.getElementById("usermailid").value.trim();
+          var gender = document.querySelector('input[name="gender"]:checked');
+          var dob = document.getElementById("dob").value.trim();
+          var phone = document.getElementById("userphone").value.trim();
+          var region = document.getElementById("region").value.trim();
+          var password = document.getElementById("userpassword").value;
+          var confirmPassword = document.getElementById("userconformpassword").value;
+
+          // Check if any field is empty
+          if (username === "" || email === "" || !gender || dob === "" || phone === "" || region === "" || password === "" || confirmPassword === "") {
+              alert("All fields are required.");
+              return false;
+          }
+
+          // Check email format
+          var emailExp = /^[^\s@]+@gmail\.com$/i;
+          if (!email.match(emailExp)) {
+              alert("Please enter a valid Gmail address.");
+              return false;
+          }
+
+          // Check password format
+          if (password.length < 6) {
+              alert("Password must be at least 6 characters long.");
+              return false;
+          }
+
+          var hasNumber = /\d/.test(password);
+          var hasUpperCase = /[A-Z]/.test(password);
+          var hasLowerCase = /[a-z]/.test(password);
+          var hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+          if (!(hasNumber && hasUpperCase && hasLowerCase && hasSpecialChar)) {
+              alert("Password must contain at least one uppercase letter, one lowercase letter, one number, one special character.");
+              return false;
+          }
+
+          // Check if passwords match
+          if (password !== confirmPassword) {
+              alert("Passwords do not match.");
+              return false;
+          }
+
+          // All validations passed
+          return true;
+      }
+  </script>
+
+  
+</head>
+<script >
+  var app = angular.module('registrationApp', []);
+
+  app.controller('RegistrationController', function($scope) {
+      $scope.selectedSection = ''; // Initially, no section is selected
+
+      // Function to show the selected section
+      $scope.showSection = function(sectionId) {
+          $scope.selectedSection = sectionId;
+      };
+
+      // Function to submit user registration form
+      $scope.submitUserForm = function() {
+          // Add form submission logic here
+          if ($scope.userRegistrationForm.$valid) {
+              // Form is valid, perform submission
+              console.log('User registration form submitted successfully.');
+          } else {
+              // Form is invalid, show error messages or handle accordingly
+              console.log('User registration form is invalid.');
+          }
+      };
+  });
+</script>
+<body ng-controller="RegistrationController">
+    <section id="buttonSection">
+        <button ng-click="showSection('user_registration')">User Registration</button>
+        <button ng-click="showSection('customer_registration')">Customer Registration</button>
+    </section>
+
+    <section id="user_registration" ng-show="selectedSection === 'user_registration'">
+        <h2>User Registration</h2>
+        <hr>
+        <hr>
+        <form name="userRegistrationForm" ng-submit="submitUserForm()" novalidate>
+            <label for="username">Enter your name:</label><br>
+            <input type="text" id="username" name="username" ng-model="user.username" placeholder="Enter your name" required><br><br>
+
+            <label for="usermailid">User Mail Id</label><br>
+            <input type="radio" id="fgender" name="gender" ng-model="user.gender" value="Female" required>
+            <label for="fgender">Female</label>
+            <input type="radio" id="ogender" name="gender" ng-model="user.gender" value="Other" required>
+            <label for="ogender">Other</label><br><br>
+
+            <label for="dob">Enter your date of birth:</label><br>
+            <input type="date" id="dob" name="dob" ng-model="user.dob" required><br><br>
+
+            <label for="userphone">Enter your phone number:</label><br>
+            <input type="tel" id="userphone" name="userphone" ng-model="user.phone" placeholder="Enter your phone number" required><br><br>
+
+            <label for="region">Enter your Country:</label><br>
+            <input type="text" id="region" name="region" ng-model="user.country" placeholder="Enter your Country" required><br><br>
+
+            <label for="userpassword">User Password:</label><br>
+            <input type="password" id="userpassword" name="password" ng-model="user.password" placeholder="Enter your password" required><br><br>
+
+            <label for="userconformpassword">Confirm Password:</label><br>
+            <input type="password" id="userconformpassword" name="confirmpassword" ng-model="user.confirmPassword" placeholder="Confirm your password" required><br><br>
+
+            <input type="submit" id="submitbutton" value="Submit">
+            <input type="reset" id="resetbutton" value="Reset">
+        </form>
+    </section>
+
+    <section id="customer_registration" ng-show="selectedSection === 'customer_registration'">
+        <h2>Customer Registration</h2>
+        <hr>
+        <hr>
+        <form name="userRegistrationForm" ng-submit="submitUserForm()" novalidate>
+          <label for="username">Enter your name:</label><br>
+          <input type="text" id="username" name="username" ng-model="user.username" placeholder="Enter your name" required><br><br>
+
+          <label for="usermailid">User Mail Id</label><br>
+          <input type="radio" id="fgender" name="gender" ng-model="user.gender" value="Female" required>
+          <label for="fgender">Female</label>
+          <input type="radio" id="ogender" name="gender" ng-model="user.gender" value="Other" required>
+          <label for="ogender">Other</label><br><br>
+
+          <label for="dob">Enter your date of birth:</label><br>
+          <input type="date" id="dob" name="dob" ng-model="user.dob" required><br><br>
+
+          <label for="userphone">Enter your phone number:</label><br>
+          <input type="tel" id="userphone" name="userphone" ng-model="user.phone" placeholder="Enter your phone number" required><br><br>
+
+          <label for="region">Enter your Country:</label><br>
+          <input type="text" id="region" name="region" ng-model="user.country" placeholder="Enter your Country" required><br><br>
+
+          <label for="userpassword">User Password:</label><br>
+          <input type="password" id="userpassword" name="password" ng-model="user.password" placeholder="Enter your password" required><br><br>
+
+          <label for="userconformpassword">Confirm Password:</label><br>
+          <input type="password" id="userconformpassword" name="confirmpassword" ng-model="user.confirmPassword" placeholder="Confirm your password" required><br><br>
+
+          <input type="submit" id="submitbutton" value="Submit">
+          <input type="reset" id="resetbutton" value="Reset">
+      </form>
+    </section>
+</body>
+</html>

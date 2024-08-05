@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Car Models</title>
+  <link rel="stylesheet" href="suma_2.css">
+  <script>
+    let totalPrice = 0;
+
+    function addToCart(item) {
+      switch (item) {
+        case 'Hyundai Creta':
+          totalPrice += 50;
+          break;
+        case 'Tata Punch':
+          totalPrice += 30;
+          break;
+        case 'Lexus LM':
+          totalPrice += 200000; // Assuming a higher price for Lexus LM
+          break;
+        case 'Hyundai Exter':
+          totalPrice += 80;
+          break;
+        case 'Kia Sonet':
+          totalPrice += 45; // Assuming a slightly higher price for Kia Sonet
+          break;
+        case 'Maruti Brezza':
+          totalPrice += 15;
+          break;
+        case 'Maruti Ertiga':
+          totalPrice += 60;
+          break;
+        case 'Tata Harrier':
+          totalPrice += 25;
+          break;
+        default:
+          console.warn("Invalid car model selected:", item);
+      }
+
+      // Update total price with formatting
+      document.getElementById('totalPrice').textContent = `Total: ₹${totalPrice.toFixed(2)}`;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>New Models</h1>
+  </header>
+
+  <section class="menu-section">
+    <div class="menu-item">
+      <img src=" " alt="Hyundai Creta">
+      <h4>Hyundai Creta</h4>
+      <p>Winning combination of style, performance, and advanced features.</p>
+      <button onclick="addToCart('Hyundai Creta')">Buy Now</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5_yWa-NdI4PU9m5yuygpYZqRuEZp7Rg5NJ6LFZEl_ZA&s" alt="Tata Punch">
+      <h4>Tata Punch</h4>
+      <p>Solid build quality and luxury in a small pack is what Punch offers</p>
+      <button onclick="addToCart('Tata Punch')">Buy Now</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9y0Px5XznS61l8hR_CKnwoReNZxURopEW_W6utaGWDQ&s" alt="Car Charger">
+      <h4>Car Charger</h4>
+      <p>All New Hot and Techy</p>
+      <button onclick="addToCart('Car Charger')">Buy Now</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="" alt="Maruti Ertiga">
+      <h4>Maruti Ertiga</h4>
+      <p>Move Together in Style</p>
+      <button onclick="addToCart('Maruti Ertiga')">Buy Now</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5TBFfdXDVhc4XsYuv6lVvzqDx9NGT8K4I-yL9xYx7jQ&s " alt="Tata Harrier">
+      <h4>Tata Harrier</h4>
+      <p>Tata Motors is advertising its all new Harrier XMS and XMAS with the “ReclaimYourLife tagline.</p>
+      <button onclick="addToCart('Tata Harrier')">Buy Now</button>
+    </div>
+  </section>
+
+  <p id="totalPrice"></p> <script src="script.js"></script>
+</body>
+</html>
